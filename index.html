@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Star Rating</title>
+    <meta
+        name="viewport"
+        content="initial-scale=1,width=device-width"
+    >
+    <link
+        rel="stylesheet"
+        href="StarRating.css"
+    >
+    <link
+        rel="stylesheet"
+        href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    >
+</head>
+
+<body>
+    <x-star-rating
+        value="3"
+        number="5"
+        id="product-rating"
+    ></x-star-rating>
+    <script src="StarRating.js"></script>
+    <script>
+
+        let element = document.getElementById('product-rating');
+        element.addEventListener('rate', function () {
+
+            console.log(this.value)
+        });
+
+    </script>
+
+
+    <script src="progressBar.js"></script>
+    <progress-bar></progress-bar>
+    <script>
+        (function () {
+            var progress = document.querySelector('progress-bar'),
+                complete = 0;
+            var progressInterval = setInterval(() => {
+                complete += 1;
+                if (complete <= 100) {
+                    progress.setAttribute('complete', complete);
+                } else {
+                    clearInterval(progressInterval);
+                }
+            }, 100);
+        })();
+    </script>
+</body>
+
+</html>
