@@ -42,7 +42,7 @@ class StarRating extends HTMLElement {
 
     this.number = this.number;
 
-    this.addEventListener("mousemove", e => {
+    this.addEventListener("mousemove", (e) => {
       let box = this.getBoundingClientRect(),
         starIndex = Math.floor(
           ((e.pageX - box.left) / box.width) * this.stars.length
@@ -55,7 +55,7 @@ class StarRating extends HTMLElement {
       this.value = this.value;
     });
 
-    this.addEventListener("click", e => {
+    this.addEventListener("click", (e) => {
       let box = this.getBoundingClientRect(),
         starIndex = Math.floor(
           ((e.pageX - box.left) / box.width) * this.stars.length
