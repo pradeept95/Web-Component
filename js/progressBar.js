@@ -22,7 +22,7 @@ template.innerHTML = `
                       </div>
                     `;
 
-class ProgressBar extends HTMLElement {
+export default class ProgressBar extends HTMLElement {
   get complete() {
     return this._complete;
   }

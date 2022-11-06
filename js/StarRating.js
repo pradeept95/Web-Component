@@ -1,4 +1,4 @@
-class StarRating extends HTMLElement {
+export default class StarRating extends HTMLElement {
   get value() {
     return this.getAttribute("value") || 0;
   }
